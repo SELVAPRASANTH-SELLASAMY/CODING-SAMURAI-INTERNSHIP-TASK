@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    background-color: #f1f2f6;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    height: 35rem;
+    width: 25rem;
+    max-width: 500px;
+    background-color: #d1d8e0;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.display{
+    height: 5rem;
+    position: relative;
+    width: 90%;
+    background-color: #CAD3C8;
+    border-radius: .25rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
+}
+.text{
+    width: 100%;
+    text-align: center;
+    font-size: .65rem;
+    margin: 1rem;
+}
+.keypad{
+    height: 21.5rem;
+    width: 90%;
+    border-radius: 1rem;
+    /* background-color: lightgray; */
+    margin-top: 3rem;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.numpad{
+    height: 22rem;
+    width: 76%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+}
+.numpad button,.arithmetic-keys button{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50px;
+    background-color: #7f8fa6;
+    margin: .80rem;
+    font-size: 1.25rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: white;
+    font-weight: 800;
+}
+
+.arithmetic-keys{
+    height: 22rem;
+    width: 5.5rem;
+    /* float: right; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.arithmetic-keys button{
+    background-color: #ffc048;
+}
+.display .captured-texts{
+    font-size: 1.35rem;
+    float: right;
+    margin: .5rem;
+    height: fit-content;
+}
+.display .capturing-texts{
+    font-size: 2rem;
+    position: absolute;
+    right: .5rem;
+    bottom: 0;
+}
+@media screen and (max-width:430px){
+    .container{
+        width: 18rem;
+        height: 28rem;
+    }
+    .numpad button,.arithmetic-keys button{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .numpad{
+        height: 16.25rem;
+    }
+    .arithmetic-keys{
+        height: 16.25rem;
+        width: 4rem;
+    }
+    .keypad{
+        margin-top: 1rem;
+        height: 17rem;
+    }
+}
