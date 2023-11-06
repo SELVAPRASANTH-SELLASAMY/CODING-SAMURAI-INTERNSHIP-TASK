@@ -10,8 +10,9 @@
     <div class="container">
         <div class="text"><h1>Web based calculator</h1></div>
         <div class="display">
-            <div class="captured-texts">125</div>
-            <div class="capturing-texts">521</div>
+            <div class="captured-texts"></div>
+            <div class="capturing-texts">0</div>
+            <div class="operation"></div>
         </div>
         <div class="keypad">
             <div class="numpad">
@@ -25,8 +26,8 @@
                 <button class="num" value=2 class="number">2</button>
                 <button class="num" value=1 class="number">1</button>
                 <button class="num" value=0 class="number">0</button>
-                <button class="number">C</button>
-                <button onclick="print()" class="number">=</button>
+                <button id="delete" class="number">C</button>
+                <button id="equal" class="number">=</button>
             </div>
             <div class="arithmetic-keys">
                 <button class="arithmaticKeys" value="+">+</button>
