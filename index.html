@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cakculator</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="../assets/logo.png">
 </head>
 <body>
-    <div class="theme" onclick="setTheme()">
-        <img src="/assets/darkmode.svg" alt="theme">
+    <div class="theme">
+        <img src="../assets/darkmode.svg" alt="theme">
     </div>
     <div class="container">
         <div class="text"><h1>Web based calculator</h1></div>
         <div class="display">
-            <div class="captured-texts"></div>
-            <div class="capturing-texts">0</div>
-            <div class="operation"></div>
+            <div class="captured-texts-area">
+                <div class="text-a"></div>
+                <div class="operation"></div>
+                <div class="text-b"></div>
+            </div>
+            <div class="capturing-text-area">
+                <div class="capturing-text"></div>
+            </div>
         </div>
         <div class="keypad">
+            <button class="clearAll-btn">Clear All</button>
             <div class="numpad">
                 <button class="num" value=9 class="number">9</button>
                 <button class="num" value=8 class="number">8</button>
@@ -39,6 +46,9 @@
                 <button class="arithmaticKeys" value="/">/</button>
             </div>
         </div>
+    </div>
+    <div class="not-supported">
+        <h4>Not supported for this device</h4>
     </div>
     <script src="index.js"></script>
 </body>
