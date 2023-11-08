@@ -1,0 +1,7 @@
+{
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "off",
+    "editor.cursorStyle": "line",
+    "editor.minimap.enabled": false,
+    "window.autoDetectColorScheme": false
+}

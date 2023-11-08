@@ -8,6 +8,7 @@ if(activeTheme === 'dark'){
     dark();
 }
 var isClickedArithmeticKey = false
+var isClickedEqualKey = false
 const capTextA = document.querySelector('.captured-texts-area > .text-a');
 const capTextB = document.querySelector('.captured-texts-area > .text-b');
 const operationSymbol = document.querySelector('.captured-texts-area > .operation');
@@ -25,7 +26,15 @@ const compute = {
     '+' : function(x,y){return x+y},
     '-' : function(x,y){return x-y},
     '*' : function(x,y){return x*y},
-    '/' : function(x,y){return x/y}
+    '/' : function(x,y){
+        if(x === 0 && y === 0){
+            return 0
+        }
+        else if(x !== 0 && y === 0){
+            return 'Math error'
+        }
+        return x/y
+    }
 }
 
 const ArithmeticKeys = document.getElementsByClassName('arithmaticKeys');
@@ -37,7 +46,7 @@ for(let i = 0;i < ArithmeticKeys.length;i++){
         operation = ArithmeticKeys[i].value;
         isClickedArithmeticKey = true
         if(isClickedArithmeticKey){
-            if(a !== undefined){
+            if(a !== undefined && isClickedEqualKey === false){
                 a = compute[prevOperation](a,c);
                 c = 0
                 capTextA.innerText = a;
@@ -47,7 +56,9 @@ for(let i = 0;i < ArithmeticKeys.length;i++){
             else {
                 a = c;
                 c = 0;
+                b = undefined
                 capTextA.innerText = a;
+                capTextB.innerText = ''
                 typing.innerText = '';
             }
         }
@@ -58,11 +69,15 @@ for(let i = 0;i < ArithmeticKeys.length;i++){
 
 const equalBtn = document.getElementById('equal');
 equalBtn.addEventListener('click', () => {
+    isClickedEqualKey = true
     if(a !== undefined && c !== undefined){
         b = c;
         capTextB.innerText = b;
         c = compute[operation](a,c);
         typing.innerText = c;
+        if(c === 'Math error'){
+            document.querySelector('.warning').style.top = '.5rem';
+        }
     }
 })
 
