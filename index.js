@@ -119,6 +119,7 @@ clearAll.addEventListener('click', () => {
     operationSymbol.innerText = '';
     operation = undefined
     prevOperation = undefined
+    document.querySelector('.warning').style.top = '-5rem';
 })
 
 const themeBtn = document.querySelector('.theme');
