@@ -47,13 +47,16 @@ for(let i = 0;i < ArithmeticKeys.length;i++){
         isClickedArithmeticKey = true
         if(isClickedArithmeticKey){
             if(a !== undefined && isClickedEqualKey === false){
-                a = compute[prevOperation](a,c);
+                if(c !== 0){
+                    a = compute[prevOperation](a,c);
+                }
                 c = 0
                 capTextA.innerText = a;
                 typing.innerText = '';
                 capTextB.innerText = '';
             }
             else {
+                isClickedEqualKey = false
                 a = c;
                 c = 0;
                 b = undefined
