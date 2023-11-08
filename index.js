@@ -134,13 +134,13 @@ function dark(){
     document.querySelector('body').style.backgroundColor = 'black';
     document.querySelector('.container').style.backgroundColor = '#2c3e50';
     document.querySelector('.text > h1').style.color = 'white';
-    document.querySelector('.theme').innerHTML = '<img src="/assets/brightmode.svg" alt="theme">';
+    document.querySelector('.theme').innerHTML = '<img src="assets/brightmode.svg" alt="theme">';
     localStorage.setItem('Theme','dark')
 }
 function bright(){
     document.querySelector('body').style.backgroundColor = '';
     document.querySelector('.container').style.backgroundColor = '';
     document.querySelector('.text > h1').style.color = '';
-    document.querySelector('.theme').innerHTML = '<img src="/assets/darkmode.svg" alt="theme">';
+    document.querySelector('.theme').innerHTML = '<img src="assets/darkmode.svg" alt="theme">';
     localStorage.removeItem('Theme')
 }
